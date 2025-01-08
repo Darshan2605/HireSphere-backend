@@ -43,6 +43,12 @@ export const login = catchAsyncErrors(async (req, res, next) => {
   sendToken(user, 201, res, "User Logged In!");
 });
 
+export const hello = (req, res, next) => {
+  res.status(200).json({
+    message: "Hello from server",
+  })
+};
+
 export const logout = catchAsyncErrors(async (req, res, next) => {
   res
     .status(201)
