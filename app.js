@@ -48,6 +48,14 @@ app.use(
   })
 );
 */
+app.use(
+  cors({
+    origin: ['https://hire-sphere-frontend.vercel.app', 'http://localhost:5174'],
+    methods: ["GET", "POST", "DELETE", "PUT"],
+    credentials: true,
+  })
+);
+
 
 app.use(cookieParser());
 app.use(express.json());
