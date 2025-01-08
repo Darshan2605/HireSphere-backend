@@ -17,7 +17,9 @@ const allowedOrigins = [
   "https://hire-sphere-backend.vercel.app",
   "http://localhost:5173",
   "http://localhost:5174"
+  
 ];
+/*
 
 app.use(
   cors({
@@ -42,6 +44,7 @@ app.use(
     optionsSuccessStatus: 204
   })
 );
+*/
 
 app.use(cookieParser());
 app.use(express.json());
