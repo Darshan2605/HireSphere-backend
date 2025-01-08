@@ -14,9 +14,9 @@ config({ path: "./config/config.env" });
 
 const allowedOrigins = [
   "https://hire-sphere-frontend.vercel.app",
+  "https://hire-sphere-backend.vercel.app",
   "http://localhost:5173",
-  "http://localhost:5174",
-  "https://hire-sphere-frontend.vercel.app"
+  "http://localhost:5174"
 ];
 
 app.use(
@@ -29,16 +29,17 @@ app.use(
       }
     },
     credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: [
       "Content-Type",
       "Authorization",
-      "x-csrf-token",
-      "Origin",
-      "Accept"
+      "X-Requested-With",
+      "Accept",
+      "Origin"
     ],
     exposedHeaders: ["set-cookie"],
-    maxAge: 86400
+    preflightContinue: true,
+    optionsSuccessStatus: 204
   })
 );
 
