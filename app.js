@@ -12,6 +12,7 @@ import fileUpload from "express-fileupload";
 const app = express();
 config({ path: "./config/config.env" });
 
+/*
 const allowedOrigins = [
   "https://hire-sphere-frontend.vercel.app",
   "https://hire-sphere-backend.vercel.app",
@@ -19,6 +20,8 @@ const allowedOrigins = [
   "http://localhost:5174"
   
 ];
+*/
+
 /*
 
 app.use(
